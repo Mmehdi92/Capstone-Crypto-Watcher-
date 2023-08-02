@@ -15,11 +15,7 @@ app.get("/", async (req, res) => {
 
     // filter the top 5 biggest volume 24h out and return them
     let cryptoData = result.data;
-    cryptoData.sort((a, b) => b.volume_24h - a.volume_24h);
-    let top5BiggestVolume = cryptoData.slice(0, 10);
-    console.log(top5BiggestVolume);
-
-    res.render("index.ejs", { crypto: top5BiggestVolume });
+    res.render("index.ejs", { crypto: cryptoData });
   } catch (error) {
     console.log(error.error);
   }

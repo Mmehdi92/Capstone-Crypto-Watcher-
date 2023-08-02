@@ -14,7 +14,9 @@ form {
 label{
   margin: 10px;
 }
-
+ ol{
+  color: beige;
+ }
 h1,
 h3 {
   text-align: center;
@@ -22,22 +24,5 @@ h3 {
   color: whitesmoke;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.navbar-logo {
-  width: 125px;
-  height: 75px;
-}
-
-.navbar {
-  background-color: #1a3f52;
-
-}
-
-.row {
-  margin-left: 5%;
-  margin-right: 10%;
-  color: antiquewhite;
-}
-
 
   

@@ -18,26 +18,26 @@
     </form>
 
     <div class="row">
-        <div class="col-6">
-            <h3>Top 5 currencies</h3>
-            <div class="row">
-                <div class="col-6">
-                    <% crypto.forEach(cryptoCoin=> {%>
-                        <ol>
-                            <%= cryptoCoin.symbol %>
-                        </ol>
-                        <% }); %>
-                </div>
-                <div class="col-6">
-                    <% crypto.forEach(cryptoCoin=> { %>
-                        <ol>
-                            <%= cryptoCoin.price_24h%>
-                        </ol>
-                        <% }); %>
-                </div>
-            </div>
+        <div class="col-12">
+          <h3>Select your currency</h3>
+          <% let chunkSize = Math.ceil(crypto.length / 3); %>
+          <div class="row">
+            <% for (let i = 0; i < crypto.length; i += chunkSize) { %>
+              <div class="col-4">
+                <ol>
+                  <% for (let j = i; j < i + chunkSize && j < crypto.length; j++) { %>
+                    <ol>
+                      <%= crypto[j].symbol %> - $<%= crypto[j].price_24 %>
+                    </ol>
+                  <% } %>
+                </ol>
+              </div>
+            <% } %>
+          </div>
         </div>
-    </div>
+      </div>
+      
+      
 
 
 
