@@ -27,7 +27,7 @@
                 <ol>
                   <% for (let j = i; j < i + chunkSize && j < crypto.length; j++) { %>
                     <ol>
-                      <%= crypto[j].symbol %> - $<%= crypto[j].price_24 %>
+                      <%= crypto[j].symbol %> - $<%= crypto[j].price_24h %>
                     </ol>
                   <% } %>
                 </ol>
@@ -37,9 +37,6 @@
         </div>
       </div>
       
-      
-
-
 
 
 
