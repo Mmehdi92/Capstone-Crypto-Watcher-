@@ -12,19 +12,30 @@
 <body>
     <%- include('partials/header.ejs') %>
         <h1>Always on the look out</h1>
-        <label for="inputsearch">
-            Search your favorite crypto here      
-            <input type="search" name="inputsearch">
-        </label>
+        <form action="/" method="post">
+            <label for="inputsearch">
+                <input type="search" name="inputsearch" placeholder="Search your Crypto">
+            </label>
+            <button class="btn btn-outline-success"type="submit">Search</button>
+        </form>
+
         <div class="row">
             <div class="col-6">
                 <h3>Top 5 currencies</h3>
                 <div class="row">
                     <div class="col-6">
-                        <p>name of cruypto</p>
+                        <% crypto.forEach(cryptoCoin => {%>
+                            <ol>
+                                <%= cryptoCoin.symbol %>
+                            </ol>
+                       <% }); %>
                     </div>
                     <div class="col-6">
-                        <p>crypto logo symbol</p>
+                      <% crypto.forEach(cryptoCoin => { %>
+                        <ol>
+                            <%= cryptoCoin.price_24h%>
+                        </ol>
+                      <% }); %>
                     </div>
                 </div>
             </div>

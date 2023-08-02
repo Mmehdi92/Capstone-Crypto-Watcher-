@@ -4,7 +4,7 @@ body {
   padding: 2%;
 }
 
-label {
+form {
   display: flex; /* Use flex container */
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
